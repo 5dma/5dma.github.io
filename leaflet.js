@@ -206,31 +206,61 @@ var polygon = L.polygon(eruvCoords,{fill:false}).addTo(map);
 
 const point = new L.Point(24,36);
 const eiIcon = new L.Icon({iconUrl: 'yellow_marker.png', iconSize: point, className:'eimarker'});
-const housingIcon = new L.Icon({iconUrl: 'blue_marker.png', iconSize: point, className:'eimarker'});
+const hotelIcon = new L.Icon({iconUrl: 'blue_marker.png', iconSize: point, className:'eimarker'});
+const apartmentIcon = new L.Icon({iconUrl: 'green_marker.png', iconSize: point, className:'eimarker'});
 const restaurantIcon = new L.Icon({iconUrl: 'brown_marker.png', iconSize: point, className:'eimarker'});
 var EICoords = L.marker([39.05357208180585, -77.13233139001525], {icon: eiIcon}).addTo(map);
-EICoords.bindPopup("Ezras Israel");
-EICoords.on('mouseover', function(e) {this.openPopup()});
-EICoords.on('mouseout', function(e) {this.closePopup()});
-var RHCoords = L.marker([39.05624,-77.126636], {icon: housingIcon}).addTo(map);
-var HiltonCoords = L.marker([39.061266,-77.122761], {icon: housingIcon}).addTo(map);
+var RHCoords = L.marker([39.05624,-77.126636], {icon: apartmentIcon}).addTo(map);
+var HiltonCoords = L.marker([39.061266,-77.122761], {icon: hotelIcon}).addTo(map);
 /*var BlueStarCoords = L.marker([39.0440965,-77.1134442]).addTo(map);*/
 var MotiCoords = L.marker([39.046623,-77.098179], {icon: restaurantIcon}).addTo(map);
 var SiennaCoords = L.marker([39.0460687,-77.1014113], {icon: restaurantIcon}).addTo(map);
 var JCCCoords = L.marker([39.053284, -77.125292]).addTo(map);
-var MarriottCoords = L.marker([39.047339, -77.115067], {icon: housingIcon}).addTo(map);
-var EvenCoords = L.marker([39.060010, -77.123485], {icon: housingIcon}).addTo(map);
+var MarriottCoords = L.marker([39.047339, -77.115067], {icon: hotelIcon}).addTo(map);
+var EvenCoords = L.marker([39.060010, -77.123485], {icon: hotelIcon}).addTo(map);
 var SunflowerCoords= L.marker([39.049300, -77.123083], {icon: restaurantIcon}).addTo(map);
 var OhMamaCoords= L.marker([39.0583356,-77.1262014], {icon: restaurantIcon}).addTo(map);
-var CanopyCoords = L.marker([39.050792, -77.116884], {icon: housingIcon}).addTo(map);
-var CongressionalTowersCoords = L.marker([39.06200125200742, -77.13250340209653], {icon: housingIcon}).addTo(map);
-var ArriveNorthBethesdaCoords = L.marker([39.05366186862672, -77.11897970444505], {icon: housingIcon}).addTo(map);
-var RollinsParkApartmentsCoords = L.marker([39.0605537558711, -77.12896003186087], {icon: housingIcon}).addTo(map);
-var TheStoriesApartmentsCoords = L.marker([39.062067413091505, -77.12838408768285], {icon: housingIcon}).addTo(map);
-var TheResidencesAtCongressionalVillageCoords = L.marker([39.06035842560305, -77.12582544535408], {icon: housingIcon}).addTo(map);
-var RollinsRidgeCoords = L.marker([39.05859898666559, -77.12303173102656], {icon: housingIcon}).addTo(map);
-var MiramontCoords = L.marker([39.056202648302644, -77.12545790219093], {icon: housingIcon}).addTo(map);
-var PerseiCoords = L.marker([39.04987682154621, -77.1167081818421], {icon: housingIcon}).addTo(map);
-var PallasCoords = L.marker([39.049189779547476, -77.11867800219115], {icon: housingIcon}).addTo(map);
-var HenriCoords = L.marker([39.05043506271609, -77.11748065801258], {icon: housingIcon}).addTo(map);
+var CanopyCoords = L.marker([39.050792, -77.116884], {icon: hotelIcon}).addTo(map);
+var CongressionalTowersCoords = L.marker([39.06200125200742, -77.13250340209653], {icon: apartmentIcon}).addTo(map);
+var ArriveNorthBethesdaCoords = L.marker([39.05366186862672, -77.11897970444505], {icon: apartmentIcon}).addTo(map);
+var RollinsParkApartmentsCoords = L.marker([39.0605537558711, -77.12896003186087], {icon: apartmentIcon}).addTo(map);
+var TheStoriesApartmentsCoords = L.marker([39.062067413091505, -77.12838408768285], {icon: apartmentIcon}).addTo(map);
+var TheResidencesAtCongressionalVillageCoords = L.marker([39.06035842560305, -77.12582544535408], {icon: apartmentIcon}).addTo(map);
+var RollinsRidgeCoords = L.marker([39.05859898666559, -77.12303173102656], {icon: apartmentIcon}).addTo(map);
+var MiramontCoords = L.marker([39.056202648302644, -77.12545790219093], {icon: apartmentIcon}).addTo(map);
+var PerseiCoords = L.marker([39.04987682154621, -77.1167081818421], {icon: apartmentIcon}).addTo(map);
+var PallasCoords = L.marker([39.049189779547476, -77.11867800219115], {icon: apartmentIcon}).addTo(map);
+var HenriCoords = L.marker([39.05043506271609, -77.11748065801258], {icon: apartmentIcon}).addTo(map);
 
+EICoords.bindPopup("Ezras Israel");
+RHCoords.bindPopup("Ring House");
+HiltonCoords.bindPopup("Hilton Rockville");
+MotiCoords.bindPopup("Al Ha'esh Israeli Grill");
+SiennaCoords.bindPopup("Siena's Vegetarian Pizza and Restaurant");
+JCCCoords.bindPopup("Jewish Community Center");
+MarriottCoords.bindPopup("Bethesda North Marriott Hotel");
+EvenCoords.bindPopup("Even Hotel");
+SunflowerCoords.bindPopup("Café Sunflower");
+OhMamaCoords.bindPopup("Oh Mama Grill");
+CanopyCoords.bindPopup("Canopy Hotel");
+CongressionalTowersCoords.bindPopup("Congressional Towers");
+ArriveNorthBethesdaCoords.bindPopup("Arrive North Bethesda");
+RollinsParkApartmentsCoords.bindPopup("Rollins Park Apartments");
+TheStoriesApartmentsCoords.bindPopup("The Stories");
+TheResidencesAtCongressionalVillageCoords.bindPopup("The Residences at Congressional Village");
+RollinsRidgeCoords.bindPopup("Rollins Ridge Apartments");
+MiramontCoords.bindPopup("Miramont");
+PerseiCoords.bindPopup("Persei at Pike & Rose");
+PallasCoords.bindPopup("Pallas at Pike & Rose");
+HenriCoords.bindPopup("The Henri");
+
+
+var coord_objects = ['EICoords', 'RHCoords', 'HiltonCoords', 'MotiCoords', 'SiennaCoords', 'JCCCoords', 'MarriottCoords', 'EvenCoords', 'SunflowerCoords', 'OhMamaCoords', 'CanopyCoords', 'CongressionalTowersCoords', 'ArriveNorthBethesdaCoords', 'RollinsParkApartmentsCoords', 'TheStoriesApartmentsCoords', 'TheResidencesAtCongressionalVillageCoords', 'RollinsRidgeCoords', 'MiramontCoords', 'PerseiCoords', 'PallasCoords', 'HenriCoords'];
+var coord_objects_old = [EICoords, RHCoords, HiltonCoords, MotiCoords, SiennaCoords, JCCCoords, MarriottCoords, EvenCoords, SunflowerCoords, OhMamaCoords, CanopyCoords, CongressionalTowersCoords, ArriveNorthBethesdaCoords, RollinsParkApartmentsCoords, TheStoriesApartmentsCoords, TheResidencesAtCongressionalVillageCoords, RollinsRidgeCoords, MiramontCoords, PerseiCoords, PallasCoords, HenriCoords];
+
+object_length = coord_objects.length;
+for (var i = 0; i < object_length; i++) {
+	coordinate = window[coord_objects[i]]
+	coordinate.on('mouseover', function(e) {this.openPopup()});
+	coordinate.on('mouseout', function(e) {this.closePopup()});
+}
